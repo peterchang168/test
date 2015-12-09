@@ -1,0 +1,17 @@
+machine:
+  python:
+    version: 2.6.8
+
+dependencies:
+  post:
+    - pip install coverage
+
+test:
+  override:
+    #- /bin/bash test/unittest_agent1.sh
+    #- /bin/bash test/unittest_agent2.sh
+    - /bin/bash:
+        parallel: true
+        files:
+          - test/unittest_agent1.sh 
+          - test/unittest_agent2.sh 
