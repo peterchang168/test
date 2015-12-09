@@ -1,7 +1,15 @@
 language: python
-env:
-  - TESTFOLDER=test/agent1 
-  - TESTFOLDER=test/agent2 
+python:
+  - "2.6"
+# command to install dependencies
 install:
   - "pip install coverage"
-script: $TESTFOLDER/unittest.sh
+# # command to run tests
+script: nosetests --version
+#language: python
+#env:
+#  - TESTFOLDER=test/agent1 
+#  - TESTFOLDER=test/agent2 
+#install:
+#  - "pip install coverage"
+#script: $TESTFOLDER/unittest.sh
