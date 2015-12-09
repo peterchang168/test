@@ -1,0 +1,7 @@
+language: python
+env:
+  - TESTFOLDER=test/agent1 
+  - TESTFOLDER=test/agent2 
+install:
+  - "pip install coverage"
+script: $TESTFOLDER/unittest.sh
